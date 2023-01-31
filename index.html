@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+ 
+<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"> </link>
+
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+
+
+   
+    <div class="mr1 container text-center" >
+        <h2>إحصائيات حول مطالب المعادلات</h2>
+        <br>
+        <div class="row">
+          <div class=" mr2 col">
+            
+                <h5>  إحصائيات عامة </h5>    
+                <hr>
+            
+           </br>
+                  <div class="info-box " >
+                    <span class="info-box-icon bg-yellow"><i class="ion-ios-people"></i></span>
+                    <div class="info-box-content">
+                      <span class="info-box-text"> مجموع المطالب</span>
+                      <span class="info-box-number">945</span>
+                    </div><!-- /.info-box-content -->
+                  </div><!-- /.info-box -->
+                
+           
+            
+          
+            </br>
+                  <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="ion-university"></i></span>
+                    <div class="info-box-content">
+                      <span class="info-box-text">مطالب معادلات التعليم العالي الخاص</span>
+                       <span class="info-box-number">670</span>
+    
+    
+    
+                      <span class="info-box-number"> 70<small>%</small></span>
+                    </div><!-- /.info-box-content -->
+                  </div><!-- /.info-box -->
+                
+           
+            
+           
+            </br>
+                  <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="ion-earth"></i></span>
+                    <div class="info-box-content">
+                      <span class="info-box-text">مطالب معادلات الشهائد الأجنبية</span>
+                      <span class="info-box-number">275</span>
+                      <span class="info-box-number">30<small>%</small></span>
+                    </div><!-- /.info-box-content -->
+                  </div><!-- /.info-box -->
+                
+          
+        
+        </div>
+
+
+
+
+
+
+       
+
+
+          <div class="mr2 col">
+            <h5>إحصائيات وفق الشهائد والإختصاص</h5>
+            <hr>
+            <figure class="highcharts-figure">
+                <div id="chart1"></div>
+                
+            </figure>
+          </div>
+          <hr >
+        </div>
+
+        <br>
+        <h5>   توزيع عدد المطالب حسب اللجان وحالة الملفات</h5>
+          
+        <figure class="highcharts-figure">
+            <div id="chart2" ></div>
+            
+          </figure>
+       
+
+          <br>
+          <h5>   جدول توزيع عدد المطالب حسب اللجان   </h5>
+          <table id="files_list" class="table table-striped dt-responsive  " style="width:100%">
+            <thead class="thead_dark">
+                <tr>
+                    <th class="th_text">اللجنة</th>
+                    <th class="th_text"> عدد المطالب المقبولة</th>
+                    <th class="th_text">عدد المطالب المرفوضة</th>
+                    <th class="th_text">عدد المطالب (استكمال ملف)</th>
+                    <th class="th_text">حالات أخري </th>
+                    <th class="th_text">تــــاريخ آخر لجنة </th>
+                    <th class="th_text">تاريخ اللجنة القادمة </th>
+                    <th class="th_text">العدد الجملي للمطالب</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>اللجنة القطاعية للعلوم الاقتصادية</td>
+                    <td>65</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>100</td>
+                </tr>
+                  <tr>
+                    <td>اللجنة القطاعيّة لعلوم الهندسة</td>
+                    <td>305</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>350</td>
+                </tr>
+               <tr>
+                    <td>اللجنة القطاعية للعلوم الاساسيّة</td>
+                    <td>60</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>80</td>
+                </tr>
+               <tr>
+                    <td>اللجنة القطاعية  للآداب والحضارة</td>
+                    <td>30</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>40</td>
+                </tr>
+               <tr>
+                    <td>اللجنة القطاعيّة للعلوم الطبّيّة وشبه الطبّيّة</td>
+                    <td>280</td>
+                    <td>20</td>
+                    <td>15</td>
+                    <td>5</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>320</td>
+                </tr>
+               <tr>
+                    <td>اللجنة القطاعية للعلوم القانونية</td>
+                    <td>20</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>30</td>
+                </tr>
+               <tr>
+                    <td>اللجنة الوطنية  للمعادلات</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>27-12-2022</td>
+                    <td>27-01-2023</td>
+                    <td>25</td>
+                </tr>
+               
+            </tbody>
+        </table>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+
+
+
+
+Highcharts.chart('chart1', {
+	credits:{
+			    		enabled: false
+			    	},
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+
+    title: {
+        text: 'توزيع عدد المطالب (945)'
+    },
+    tooltip: {
+		useHTML: true,
+        pointFormat: ' <b>{point.y} :</b> {series.name}'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '{point.percentage:.1f} % : <b>{point.name}</b>',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                },
+				useHTML: true,
+            }
+			
+        }
+    },
+	
+    series: [{
+        name: 'عدد المطالب',
+        colorByPoint: true,
+        data: [{
+            name: 'الإجازة',
+            y: 250,
+            sliced: true,
+            selected: true,
+			"drilldown": "الإجازة"
+
+        }, {
+            name: 'الشهادة الوطنية لمهندس',
+            y:  350,
+			"drilldown": "الشهادة الوطنية لمهندس"
+        }, {
+            name: 'الماجستير ',
+            y:120 , 
+            "drilldown": "الماجستير"
+        }, {
+            name: 'الدكتوراه ',
+            y: 80 ,
+            "drilldown": "الدكتوراه"
+        }, {
+            name: 'الطب',
+            y: 145 ,
+            "drilldown": "الطب"
+        }]
+    }],
+	 "drilldown": {
+        "series": [
+            {
+                "name": "الإجازة",
+                "id": "الإجازة",
+                "data": [
+                    [
+                        "الإجازة في علوم التصرف",50
+                        
+                    ],
+                    [
+                        "الإجازة في القانون",50
+                        
+                    ],
+                    [
+                        "الإجازة في تكنولوجيات الإعلامية",100
+                        
+                    ],
+                    [
+                        "الإجازة في الهندسـة المدنية",30
+                        
+                    ],
+                    [
+                        "الاجازة في تصميم الصورة",20
+                        
+                    ]
+                ]
+            },
+			{
+                "name": "الشهادة الوطنية لمهندس",
+                "id": "الشهادة الوطنية لمهندس",
+                "data": [
+                    [
+                        "إعلامية",160
+                        
+                    ],
+                    [
+                        "هندسة مدنية",50
+                        
+                    ],
+                    [
+                        "هندسة كهربائية",80
+                        
+                    ],
+                    [
+                        "بيوتكنولوجيا",60
+                        
+                    ],
+                ]
+            },
+            {
+                "name": "الماجستير",
+                "id": "الماجستير",
+                "data": [
+                    [
+                        "إعلامية",80
+                        
+                    ],
+                    [
+                        "هندسة كهربائية",10
+                        
+                    ],
+                    [
+                        "بيوتكنولوجيا",30
+                        
+                    ],
+                ]
+            },
+            {
+                "name": "الدكتوراه",
+                "id": "الدكتوراه",
+                "data": [
+                    [
+                        "إعلامية",50
+                        
+                    ],
+                    [
+                        "هندسة كهربائية",20
+                        
+                    ],
+                    [
+                        "بيوتكنولوجيا",10
+                        
+                    ],
+                ]
+            }
+			]
+	 }
+});
+
+
+// Data retrieved from https://gs.statcounter.com/browser-market-share#monthly-202201-202201-bar
+
+// Create the chart
+Highcharts.chart('chart2', {
+    credits:{
+			    		enabled: false
+			    	},
+    chart: {
+        
+    type: 'column'
+  },
+  title: {
+    align: 'center',
+    text: ''
+  },
+  
+  accessibility: {
+    announceNewData: {
+      enabled: true
+    }
+  },
+  xAxis: {
+    type: 'category',
+    reversed: true
+  },
+  yAxis: {
+    title: {
+      text: 'عدد المطالب'
+    },
+    useHTML: true,
+    opposite: true
+
+  },
+  legend: {
+    enabled: false
+  },
+  plotOptions: {
+    series: {
+      borderWidth: 0,
+      dataLabels: {
+        enabled: true,
+        useHTML: true,
+      }
+    }
+  },
+
+  tooltip: {
+		useHTML: true,
+        pointFormat: ' <b>{point.y} :</b> {series.name}',
+        
+    },
+
+  series: [
+    {
+      name: 'عدد المطالب',
+      colorByPoint: true,
+      data: [
+        {
+          name: 'اللجنة القطاعية للعلوم الاقتصادية',
+          y: 100,
+          drilldown: 'اللجنة القطاعية للعلوم الاقتصادية'
+        },
+        {
+          name: 'اللجنة القطاعيّة لعلوم الهندسة',
+          y: 350,
+          drilldown: 'اللجنة القطاعيّة لعلوم الهندسة'
+        },
+        {
+          name: 'اللجنة القطاعية للعلوم الاساسيّة',
+          y: 80,
+          drilldown: 'اللجنة القطاعية للعلوم الاساسيّة'
+        },
+        {
+          name: 'اللجنة القطاعية  للآداب والحضارة',
+          y: 40,
+          drilldown: 'اللجنة القطاعية  للآداب والحضارة'
+        },
+        {
+          name: 'اللجنة القطاعية للعلوم الطبية وشبه الطبية',
+          y: 320,
+          drilldown: 'اللجنة القطاعية للعلوم الطبية وشبه الطبية'
+        },
+        {
+          name: 'اللجنة القطاعية للعلوم القانونية',
+          y: 30,
+          drilldown: 'اللجنة القطاعية للعلوم القانونية'
+        },
+        {
+          name: 'اللجنة الوطنية  للمعادلات',
+          y: 25,
+          drilldown: null
+        }
+      ]
+    }
+  ],
+  drilldown: {
+    breadcrumbs: {
+      position: {
+        align: 'right'
+      }
+    },
+    series: [
+      {
+        name: 'اللجنة القطاعية للعلوم الاقتصادية',
+        id: 'اللجنة القطاعية للعلوم الاقتصادية',
+        data: [
+          [
+            'المطالب المقبولة',
+            65
+          ],
+          [
+            'المطالب المرفوضة',
+            10
+          ],
+          [
+            'استكمال ملف',
+            20
+          ],
+          [
+            'حالات أخري',
+           5
+          ]
+        ]
+      },
+      {
+        name: 'اللجنة القطاعيّة لعلوم الهندسة',
+        id: 'اللجنة القطاعيّة لعلوم الهندسة',
+        data: [
+          [
+            'المطالب المقبولة',
+            305
+          ],
+          [
+            'المطالب المرفوضة',
+            15
+          ],
+          [
+            'استكمال ملف',
+            20
+          ],
+          [
+            'حالات أخري',
+          10
+          ]
+        ]
+      },
+      {
+        name: 'اللجنة القطاعية للعلوم الاساسيّة',
+        id: 'اللجنة القطاعية للعلوم الاساسيّة',
+        data: [
+          [
+            'المطالب المقبولة',
+            60
+          ],
+          [
+            'المطالب المرفوضة',
+            10
+          ],
+          [
+            'استكمال ملف',
+            5
+          ],
+          [
+            'حالات أخري',
+           5
+          ]
+        ]
+      },
+      {
+        name: 'اللجنة القطاعية  للآداب والحضارة',
+        id: 'اللجنة القطاعية  للآداب والحضارة',
+        data: [
+          [
+            'المطالب المقبولة',
+            30
+          ],
+          [
+            'المطالب المرفوضة',
+            3
+          ],
+          [
+            'استكمال ملف',
+            5
+          ],
+          [
+            'حالات أخري',
+           2
+          ]
+        ]
+      },
+      {
+        name: 'اللجنة القطاعية للعلوم الطبية وشبه الطبية',
+        id: 'اللجنة القطاعية للعلوم الطبية وشبه الطبية',
+        data: [
+          [
+            'المطالب المقبولة',
+            280
+          ],
+          [
+            'المطالب المرفوضة',
+            20
+          ],
+          [
+            'استكمال ملف',
+            15
+          ],
+          [
+            'حالات أخري',
+           5
+          ]
+        ]
+      },
+      {
+        name: 'اللجنة القطاعية للعلوم القانونية',
+        id: 'اللجنة القطاعية للعلوم القانونية',
+        data: [
+          [
+            'المطالب المقبولة',
+            20
+          ],
+          [
+            'المطالب المرفوضة',
+            6
+          ],
+          [
+            'استكمال ملف',
+            1
+          ],
+          [
+            'حالات أخري',
+           3
+          ]
+        ]
+      }
+    ]
+  }
+});
+
+
+
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+
+<script>
+     $(document).ready(function() {
+            $('#files_list').DataTable({
+                "aLengthMenu": [
+                    [5, 10, 25, -1],
+                    [5, 10, 25, "All"]
+                ],
+                "iDisplayLength": 10,
+
+                "language": {
+                    "sProcessing": "جارٍ التحميل...",
+                    "sLengthMenu": "أظهر _MENU_ مدخلات",
+                    "sZeroRecords": "لم يعثر على أية سجلات",
+                    "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+                    "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+                    "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                    "sInfoPostFix": "",
+                    "sSearch": "ابحث:",
+                    "sUrl": "",
+                    "oPaginate": {
+                        "sFirst": "الأول",
+                        "sPrevious": "السابق",
+                        "sNext": "التالي",
+                        "sLast": "الأخير"
+                    }
+                }
+            });
+        });
+</script>
+
+</html>
+
+
